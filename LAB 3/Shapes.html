@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SHAPES-Internet and Web Systems</title>
+	<style>
+
+	.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center; 
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} 
+.button3 {background-color: #f44336;} 
+.button4 {background-color: #4C4CFF;}
+</style>
+<script>
+	function triangle() {
+
+		document.getElementById("answer").innerHTML=" "
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.clearRect(0,0,c.width,c.height);
+	ctx.beginPath();
+	ctx.moveTo(100, 120);
+	ctx.lineTo(200, 120);
+	ctx.lineTo(150, 20);
+	ctx.closePath();
+	ctx.stroke();
+	ctx.fillStyle = "red";
+	ctx.fill();
+
+                          var c = document.getElementsByClassName("getdata_c")[0];
+                          var t = document.getElementsByClassName("getdata_t")[0];
+                          var r= document.getElementsByClassName("getdata_r")[0];
+                          var s = document.getElementsByClassName("getdata_s")[0];
+                          var h = document.getElementsByClassName("getdata_h")[0];
+
+                          c.style.display="none";
+                          r.style.display="none";
+                          s.style.display="none";
+                          h.style.display="none";
+                          t.style.display="block";
+
+             
+
+
+	}
+
+	function circle(){
+
+	   document.getElementById("answer").innerHTML=" "
+	   var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.clearRect(0,0,c.width,c.height);
+	ctx.beginPath();
+	ctx.arc(150,75,50,0,2*Math.PI);
+	ctx.stroke();
+	ctx.fillStyle = "red";
+	ctx.fill();
+
+	   var c = document.getElementsByClassName("getdata_c")[0];
+                          var t = document.getElementsByClassName("getdata_t")[0];
+                          var r= document.getElementsByClassName("getdata_r")[0];
+                          var s = document.getElementsByClassName("getdata_s")[0];
+                          var h = document.getElementsByClassName("getdata_h")[0];
+
+                          c.style.display="block";
+                          r.style.display="none";
+                          s.style.display="none";
+                          h.style.display="none";
+                          t.style.display="none";
+
+	  }
+
+
+	 function square(){
+	 document.getElementById("answer").innerHTML=" "
+
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.clearRect(0,0,c.width,c.height);
+	ctx.beginPath();
+	ctx.rect(90, 25, 100, 100);
+	ctx.fillStyle = "red";
+	ctx.fill();
+
+	  	var c = document.getElementsByClassName("getdata_c")[0];
+                          var t = document.getElementsByClassName("getdata_t")[0];
+                          var r= document.getElementsByClassName("getdata_r")[0];
+                          var s = document.getElementsByClassName("getdata_s")[0];
+                          var h = document.getElementsByClassName("getdata_h")[0];
+
+                          c.style.display="none";
+                          r.style.display="none";
+                          s.style.display="block";
+                          h.style.display="none";
+                          t.style.display="none";
+
+	 }
+
+	 function rect(){
+
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.clearRect(0,0,c.width,c.height);
+	ctx.beginPath();
+	ctx.rect(70, 25, 150, 100);
+	ctx.fillStyle = "red";
+	ctx.fill();
+	 	
+	 /*
+	 document.getElementById("answer").innerHTML=" "
+	 document.getElementById("image_t").style.display = "none";
+	 document.getElementById("image_c").style.display = "none";
+	 document.getElementById("image_s").style.display = "none";
+	 document.getElementById("image_h").style.display = "none";
+	 document.getElementById("image_r").style.display = "block";
+	*/
+	 var c = document.getElementsByClassName("getdata_c")[0];
+                          var t = document.getElementsByClassName("getdata_t")[0];
+                          var r= document.getElementsByClassName("getdata_r")[0];
+                          var s = document.getElementsByClassName("getdata_s")[0];
+                          var h = document.getElementsByClassName("getdata_h")[0];
+
+                          c.style.display="none";
+                          r.style.display="block";
+                          s.style.display="none";
+                          h.style.display="none";
+                          t.style.display="none";
+
+
+	 }
+
+	 function hex(){
+	 document.getElementById("answer").innerHTML=" "
+              
+
+              var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.clearRect(0,0,c.width,c.height);
+		ctx.beginPath();
+		ctx.lineTo(150, 130);
+		ctx.lineTo(100,100);
+		ctx.lineTo(100,50);
+		ctx.lineTo(150,20);
+		ctx.lineTo(200,50);
+		ctx.lineTo(200,100);
+		ctx.lineTo(150,130);
+		ctx.closePath();
+		ctx.fillStyle = "red";
+		ctx.fill();
+
+
+
+	
+		ctx.stroke();
+
+	 var c = document.getElementsByClassName("getdata_c")[0];
+                          var t = document.getElementsByClassName("getdata_t")[0];
+                          var r= document.getElementsByClassName("getdata_r")[0];
+                          var s = document.getElementsByClassName("getdata_s")[0];
+                          var h = document.getElementsByClassName("getdata_h")[0];
+
+                          c.style.display="none";
+                          r.style.display="none";
+                          s.style.display="none";
+                          h.style.display="block";
+                          t.style.display="none";
+
+                       
+
+
+	 }
+
+
+	 function calculate(){
+
+	 	
+	 	var area=0;
+
+	 	var perimeter=0;
+
+	 	
+
+	 	if(document.getElementsByClassName("getdata_t")[0].style.display=="block"){
+	 		
+	 		//document.getElementById("answer").innerHTML="bye"
+	 		var x1= document.getElementById("tside1").value;
+	 		var x2=document.getElementById("tside2").value;
+	 		var x3=document.getElementById("tside3").value;
+	 		perimeter= parseFloat(x1)+parseFloat(x2)+parseFloat(x3);
+	 		document.getElementById("answer").innerHTML= perimeter;
+	 		var p=perimeter/2;
+	 		area=Math.sqrt(p*(p-x1)*(p-x2)*(p-x3))
+
+	 	}
+
+	 	if(document.getElementsByClassName("getdata_c")[0].style.display=="block"){
+
+	 		var x1=parseFloat(document.getElementById("cradius").value);
+
+	 		perimeter=2*3.14*x1;
+	 		area= 3.14*x1*x1;
+	 	}
+
+	 	if(document.getElementsByClassName("getdata_s")[0].style.display=="block"){
+
+	 		var x1=parseFloat(document.getElementById("sside").value);
+	 		perimeter=4*x1;
+	 		area= x1*x1;
+	 		
+	 	}
+
+	 	if(document.getElementsByClassName("getdata_r")[0].style.display=="block"){
+
+	 		var x1=parseFloat(document.getElementById("rlength").value);
+	 		var x2=parseFloat(document.getElementById("rbreadth").value);
+
+	 		area=x1*x2;
+	 		perimeter=2*(x1+x2);
+
+	 	}
+
+	 	if(document.getElementsByClassName("getdata_h")[0].style.display=="block"){
+
+	 		var x1=parseFloat(document.getElementById("hside").value);
+	 		perimeter=x1*6;
+	 		area=(3*Math.sqrt(3)/2)*(x1*x1);
+
+	 	}
+
+	 	var ans="The Perimeter is "+ perimeter + " and the Area is " + area;
+
+	 	document.getElementById("answer").innerHTML= ans;
+
+
+	 }
+
+	 
+
+
+</script>
+
+</head>
+<body>
+<header style="background-color: #4C4CFF ; text-align: center; color: white"><h1>SHAPES</h1></header>
+<div style="text-align: center;">
+<button class="button" onclick="triangle()">Triangle</button>
+<button class="button button2" onclick="circle()">Circle</button>
+<button class="button button3" onclick="square()">Square</button>
+<button class="button button4" onclick="rect()">Rectangle</button>
+<button class="button" onclick="hex()">Hexagon</button>
+</div>
+
+<section style="margin-top:  10px;">
+<div class="getdata_c" style="display: none;">
+    <label>Radius</label>
+    <input id="cradius" type="number" />
+  </div>
+  
+  <div class="getdata_t" style="display: none">
+      	
+  <label>Side 1</label>
+    <input id="tside1" type="number" />
+    <label>Side 2</label>
+    <input id="tside2" type="number" />
+    <label>Side 3</label>
+    <input id="tside3" type="number" />
+
+  </div>
+  
+  <div class="getdata_s" style="display: none;">
+    
+	<label>Side</label>
+    <input id="sside" type="number" />
+
+
+  </div>
+  
+  <div class="getdata_r" style="display: none;">
+
+    <label>Length</label>
+    <input id="rlength" type="number" />
+    <label>Breadth</label>
+    <input id="rbreadth" type="number" />
+
+  </div>
+  
+  <div class="getdata_h" style="display: none;">
+    <label>Side</label>
+    <input id="hside" type="number" />
+  </div>
+
+  <button class="button" onclick="calculate()" style="margin:10px;">Submit</button>
+  </section>
+
+<div><canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+	
+</canvas></div>
+
+
+
+
+<p id="answer">	</p>
+
+</body>
