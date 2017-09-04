@@ -31,21 +31,43 @@ function Jobs() {
 document.getElementById("Jobs").classList.toggle("show");
 }
 
-
+        
+var cur_marker,geocoder;
       function initMap() {
-        var myLatLng = {lat: -25.363, lng: 131.044};
-
+        var myLatLng = {lat: 28.7041, lng: 77.1025};
+          //-25.363,131.044
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: myLatLng
         });
-
+        geocoder = new google.maps.Geocoder();
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
           title: 'Hello World!'
         });
+          
+        map.addListener('click', function(e) {
+            getToLoc(e.latLng, map);
+        });
       }
+        
+        
+    function getToLoc(latLng,map){
+      if(cur_marker!=null) cur_marker.setMap(null);
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+        });
+        cur_marker=marker;
+        map.panTo(latLng);
+        geocoder.geocode({'location':latLng},function(results,status){
+            document.getElementById('location').innerHTML=results[0].address_components[3].long_name;
+            
+           
+            
+        });
+    }
 	</script>
 </head>
 
