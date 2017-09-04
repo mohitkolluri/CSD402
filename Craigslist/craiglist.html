@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>"Craigslist</title>
+	<link rel="stylesheet" type="text/css" href="stylist.css">
+	<script>
+
+
+	function Community() {
+
+document.getElementById("Community").classList.toggle("show");
+
+}
+
+
+function Housing() {
+document.getElementById("Housing").classList.toggle("show");
+}
+
+function Personals() {
+document.getElementById("Personals").classList.toggle("show");
+}
+
+function ForSale() {
+document.getElementById("ForSale").classList.toggle("show");
+}
+
+function Jobs() {
+document.getElementById("Jobs").classList.toggle("show");
+}
+
+
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+	</script>
+</head>
+
+
+<body>
+
+
+	<section id="left_main">
+		<div id="title">Craigslist</div>
+		<div id="searchbar">
+	   	 <input id="search" type="text" placeholder="Search.." style="color: #84bd00;" />
+	  </div>
+		<p id="CalTitle"> Event Calender</p>
+		<div id="calender">
+				<table id="calTable">
+					<tr>
+						<th class="headCal">M</th>
+						<th class="headCal">T</th>
+						<th class="headCal">W</th>
+						<th class="headCal">T</th>
+						<th class="headCal">F</th>
+						<th class="headCal">S</th>
+						<th class="headCal">S</th>
+					</tr>
+
+					<tr>
+						<td class="numCal"><a href="#">28</a></td>
+						<td class="numCal"><a href="#">29</a></td>
+						<td class="numCal"><a href="#">30</a></td>
+						<td class="numCal"><a href="#">31</a></td>
+						<td class="numCal"><a href="#">1</a></td>
+						<td class="numCal"><a href="#">2</a></td>
+						<td class="numCal"><a href="#">3</a></td>
+					</tr>
+
+					<tr>
+						<td class="numCal"><a href="#">4</a></td>
+						<td class="numCal"><a href="#">5</a></td>
+						<td class="numCal"><a href="#">6</a></td>
+						<td class="numCal"><a href="#">7</a></td>
+						<td class="numCal"><a href="#">8</a></td>
+						<td class="numCal"><a href="#">9</a></td>
+						<td class="numCal"><a href="#">10</a></td>
+					</tr>
+
+					<tr>
+						<td class="numCal"><a href="#">11</a></td>
+						<td class="numCal"><a href="#">12</a></td>
+						<td class="numCal"><a href="#">13</a></td>
+						<td class="numCal"><a href="#">14</a></td>
+						<td class="numCal"><a href="#">15</a></td>
+						<td class="numCal"><a href="#">16</a></td>
+						<td class="numCal"><a href="#">17</a></td>
+					</tr>
+
+					<tr>
+						<td class="numCal"><a href="#">18</a></td>
+						<td class="numCal"><a href="#">19</a></td>
+						<td class="numCal"><a href="#">20</a></td>
+						<td class="numCal"><a href="#">21</a></td>
+						<td class="numCal"><a href="#">22</a></td>
+						<td class="numCal"><a href="#">23</a></td>
+						<td class="numCal"><a href="#">24</a></td>
+					</tr>
+
+
+				</table>
+		</div>
+        
+        <div id="info">
+            <p>help, faq, abuse, legal</p>
+            <p>avoid scams & fraud</p>
+            <p>personal safety tips</p>
+            <p>terms of use</p>
+            <p>privacy policy</p>
+            <p>system status</p>
+        </div>
+
+	</section>
+
+	<section id="right_main">
+      <p id="MapChoice">Map Choice Options</p>
+      <div id="subs">  
+      <form action="#" method="get" id="subscription">
+          <input type="checkbox" name="Community" class="subelem"><label class="check">Community</label><br>
+          <input type="checkbox" name="Personals" class="subelem"><label class="check">Personals</label><br>
+          <input type="checkbox" name="Jobs" class="subelem"><label class="check">Jobs</label><br>
+          <input type="checkbox" name="Housing" class="subelem"><label class="check">Housing</label><br>
+          <input type="checkbox" name="For Sale" class="subelem"><label class="check">For Sale</label><br>
+          <input type="checkbox" name="Services" class="subelem"><label class="check">Services</label><br>
+          <input type="checkbox" name="Gigs" class="subelem"><label class="check">Gigs</label><br>
+          <input type="checkbox" name="All" class="subelem"><label class="check">All</label><br>
+        
+          <input type="submit" value="Submit" class="submitSub">   
+      </form>
+      </div>
+  </section>
+
+	<section id="center_main">
+					<div id='location'>Delhi</div>
+					<div id='map'></div>
+					<div class="dropdown">
+								  <button onclick="Community()" class="dropbtn" >Community</button>
+								  <div id="Community" class="dropdown-content">
+								  <a href="#">activities</a>
+								  <a href="#">classes</a>
+								  <a href="#">events</a>
+								  <a href="#">general</a>
+								  <a href="#">groups</a>
+								  <a href="#">local news</a>
+								  <a href="#">lost+found</a>
+								  <a href="#">musicians</a>
+								  <a href="#">pets</a>
+								  <a href="#">politics</a>
+								  <a href="#">rideshare</a>
+								  <a href="#">volunteers</a>
+								  <a href="#">artists</a>
+								  <a href="#">childcare</a>
+								  </div>
+				</div>
+				<div class="dropdown">
+									<button onclick="Housing()" class="dropbtn" >Housing</button>
+									<div id="Housing" class="dropdown-content">
+									<a href="#">apts/housing</a>
+									<a href="#">housing swap</a>
+									<a href="#">housing wanted</a>
+									<a href="#">commercial</a>
+									<a href="#">parking/ storage</a>
+									<a href="#">real estate for sale</a>
+									<a href="#">room/ shared</a>
+									<a href="#">rooms wanted</a>
+									<a href="#">sublets/ temporary</a>
+									<a href="#">vacation rentals</a>
+									</div>
+				</div>
+
+				<div class="dropdown">
+								<button onclick="Personals()" class="dropbtn" >Personals</button>
+								<div id="Personals" class="dropdown-content">
+								<a href="#">strictly platonic</a>
+								<a href="#">women seeking women</a>
+								<a href="#">women seeking men</a>
+								<a href="#">men seeking women</a>
+								<a href="#">men seeking men</a>
+								<a href="#">misc romance</a>
+								<a href="#">casual encounters</a>
+								<a href="#">missed connections</a>
+								<a href="#">rants and raves</a>
+								</div>
+			</div>
+
+			<div class="dropdown">
+							<button onclick="ForSale()" class="dropbtn" >For Sale</button>
+							<div id="ForSale" class="dropdown-content">
+							<a href="#">antiques</a>
+							<a href="#">free</a>
+							<a href="#">appliances</a>
+							<a href="#">furniture</a>
+							<a href="#">arts+crafts</a>
+							<a href="#">garage sale</a>
+							<a href="#">atv/utv/sno</a>
+							<a href="#">general</a>
+							<a href="#">auto parts</a>
+							<a href="#">heavy equip</a>
+							<a href="#">baby+kid</a>
+							<a href="#">household</a>
+							<a href="#">barter</a>
+							<a href="#">jewelry</a>
+							<a href="#">beauty</a>
+							<a href="#">materials</a>
+							<a href="#">bikes</a>
+							<a href="#">motorcycles</a>
+							<a href="#">boats</a>
+							<a href="#">music intr</a>
+							<a href="#">books</a>
+							<a href="#">photo+video</a>
+							<a href="#">business</a>
+							<a href="#">cars+trucks</a>
+							<a href="#">sporting</a>
+							<a href="#">tickets</a>
+							<a href="#">tools</a>
+							<a href="#">trailers</a>
+							</div>
+		</div>
+
+		<div class="dropdown">
+						<button onclick="Jobs()" class="dropbtn" >Jobs</button>
+						<div id="Jobs" class="dropdown-content">
+						<a href="#">accounting+finance</a>
+						<a href="#">admin/office</a>
+						<a href="#">arch/engineering</a>
+						<a href="#">art/media/design</a>
+						<a href="#">biotech/sciece</a>
+						<a href="#">business/mgmt</a>
+						<a href="#">customer service</a>
+						<a href="#">education</a>
+						<a href="#">food/ bev/ hosp</a>
+						<a href="#">general labor</a>
+						<a href="#">government</a>
+						<a href="#">human resources</a>
+						<a href="#">internet engineers</a>
+						<a href="#">legal</a>
+						<a href="#">manufacturing</a>
+						<a href="#">marketing</a>
+						<a href="#">medical</a>
+						<a href="#">non-profit sector</a>
+						<a href="#">real estate</a>
+						<a href="#">retail/ wholesome</a>
+						<a href="#">sales</a>
+						<a href="#">skilled</a>
+						<a href="#">software</a>
+						<a href="#">systems/networks</a>
+						<a href="#">sporting</a>
+						<a href="#">transport</a>
+						<a href="#">info design</a>
+						<a href="#">writing/ editing</a>
+						</div>
+		</div>
+
+	</section>
+
+	<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqODMxaqcr-f6aSd_Wza8qQXYvBXfHmBc&callback=initMap">
+	</script>
+
+
+</body>
+</html>
